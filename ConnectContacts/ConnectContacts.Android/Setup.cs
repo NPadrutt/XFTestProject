@@ -1,9 +1,7 @@
 ﻿using Android.Content;
-using Java.Interop;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Forms.Droid.Platform;
 using MvvmCross.Forms.Platform;
-using MvvmCross.Platform.IoC;
 
 namespace ConnectContacts.Droid
 {
