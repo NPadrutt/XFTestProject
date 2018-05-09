@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
+using MvvmCross.Forms.Platforms.Ios.Core;
+using MvvmCross.Platforms.Ios.Core;
 using UIKit;
 
 namespace ConnectContacts.iOS
@@ -11,7 +9,7 @@ namespace ConnectContacts.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    public partial class AppDelegate : MvxFormsApplicationDelegate<MvxFormsIosSetup<CoreApp, App>, CoreApp, App>
     {
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
@@ -22,9 +20,6 @@ namespace ConnectContacts.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
-
             return base.FinishedLaunching(app, options);
         }
     }

@@ -1,5 +1,5 @@
 ﻿using ConnectContacts.ViewModels;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.ViewModels;
 
 namespace ConnectContacts
 {
@@ -7,7 +7,7 @@ namespace ConnectContacts
     {
         public override void Initialize()
         {
-            RegisterNavigationServiceAppStart<WelcomeViewModel>();
+            RegisterAppStart<WelcomeViewModel>();
         }
     }
 }
